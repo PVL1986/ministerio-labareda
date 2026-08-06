@@ -1,2 +1,2 @@
 # Projeto-Igreja
-Site de uma igreja, utilizando HTML, CSS e JavaScript
+Site de uma igreja, utilizando HTML, CSS e JavaScript (EM CONSTRUÇÃO)
