@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministério Pentecostal Labareda</title>
+    <!-- Google Fonts (Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    <!-- Ícones FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link para o CSS Externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barra de Navegação Superior (Header) -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fa-solid fa-fire"></i> <span>Ministério Pentecostal Labareda</span>
+            </div>
+            <nav class="site-nav">
+                <button class="nav-link active" onclick="switchTab('palavra')">Palavra do Dia</button>
+                <button class="nav-link" onclick="switchTab('curiosidades')">Curiosidades</button>
+                <button class="nav-link" onclick="switchTab('cultos')">Horário dos Cultos</button>
+                <button class="nav-link" onclick="switchTab('oracao')">Pedidos de Oração</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Principal com a Logo em Destaque e Frase -->
+    <section class="hero-banner">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <p>Um ambiente de fé, comunhão, conhecimento e intercessão</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo Principal -->
+    <main class="site-container">
+        
+        <!-- ABA 1: PALAVRA DO DIA -->
+        <section id="palavra" class="tab-content active">
+            <div class="grid-two-columns">
+                <div class="main-card">
+                    <h2><i class="fa-solid fa-book-open"></i> A Palavra do Dia</h2>
+                    
+                    <img src="https://images.unsplash.com/photo-1504052434569-70ad58565b90?q=80&w=800" alt="Bíblia Aberta" class="content-image">
+                    
+                    <blockquote class="bible-quote">
+                        "Elevo os meus olhos para os montes; de onde me vem o socorro? O meu socorro vem do Senhor, que fez os céus e a terra." 
+                        <cite>— Salmo 121:1-2</cite>
+                    </blockquote>
+                    <p>Que no dia de hoje você possa lembrar que nenhuma tempestade é maior do que o Deus que guarda a sua vida. Quando depositamos nossa confiança no Criador, encontramos o descanso e a paz que excedem todo o entendimento humano. Não tema o amanhã, pois o Senhor já está lá.</p>
+                </div>
+                
+                <div class="sidebar-card">
+                    <h3><i class="fa-solid fa-radio"></i> Rádio Web Labareda</h3>
+                    <img src="https://images.unsplash.com/photo-1484755560693-a4074577af3a?q=80&w=400" alt="Microfone / Louvor" class="sidebar-image">
+                    <p style="margin-top: 10px;">Acompanhe nossa programação de louvores e reflexões ao vivo.</p>
+                    <div class="audio-player">
+                        <span><i class="fa-solid fa-signal"></i> Transmissão Ao Vivo</span>
+                        <button class="play-btn" id="playBtn" onclick="toggleAudio()">
+                            <i class="fa-solid fa-play"></i> Ouvir Agora
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABA 2: CURIOSIDADES -->
+        <section id="curiosidades" class="tab-content">
+            <h2><i class="fa-solid fa-lightbulb"></i> Curiosidades Bíblicas e Históricas</h2>
+            <p class="section-desc">Explore fatos fascinantes sobre as escrituras sagradas que você talvez não conheça.</p>
+            
+            <div class="card-list">
+                <div class="info-card">
+                    <img src="https://images.unsplash.com/photo-1455642305367-68834a1da7ab?q=80&w=300" alt="Pergaminhos antigos" class="thumb-image">
+                    <div class="info-text">
+                        <h3>O Livro Mais Longo e o Mais Curto</h3>
+                        <p>O livro de Salmos é o mais longo da Bíblia, contendo 150 capítulos. Já o livro mais curto em número de palavras é a Segunda Carta de João.</p>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=300" alt="Mapa mundi antigo" class="thumb-image">
+                    <div class="info-text">
+                        <h3>Tradução Universal</h3>
+                        <p>A Bíblia é o livro mais traduzido e distribuído da história da humanidade. Ela já foi traduzida para mais de 3.300 idiomas e dialetos diferentes.</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <img src="https://images.unsplash.com/photo-1501139083538-0139883ac3ec?q=80&w=300" alt="Ampulheta antiga" class="thumb-image">
+                    <div class="info-text">
+                        <h3>Período de Escrita</h3>
+                        <p>A Bíblia levou cerca de 1.600 anos para ser totalmente escrita. Ela foi redigida por cerca de 40 autores diferentes, incluindo reis, pescadores, médicos e poetas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABA 3: HORÁRIO DOS CULTOS -->
+        <section id="cultos" class="tab-content">
+            <h2><i class="fa-solid fa-calendar-days"></i> Nossos Horários de Cultos</h2>
+            <p class="section-desc">Venha estar conosco presencialmente ou acompanhe nossas transmissões online.</p>
+            
+            <img src="https://images.unsplash.com/photo-1515162305285-0293e4767cc2?q=80&w=1200" alt="Altar de Igreja" class="banner-wide-image">
+            
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Dia da Semana</th>
+                        <th>Tipo de Celebração / Reunião</th>
+                        <th>Horário</th>
+                        <th>Transmissão</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Domingo</strong></td>
+                        <td>Culto de Celebração da Família</td>
+                        <td>19h00</td>
+                        <td><span class="badge live">Ao Vivo</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Terça-Feira</strong></td>
+                        <td>Culto de Ensino e Doutrina</td>
+                        <td>19h30</td>
+                        <td><span class="badge gravado">Disponível Gravado</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Quinta-Feira</strong></td>
+                        <td>Reunião de Clamor e Intercessão</td>
+                        <td>15h00</td>
+                        <td><span class="badge offline">Presencial</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sábado</strong></td>
+                        <td>Culto de Jovens e Adolescentes</td>
+                        <td>20h00</td>
+                        <td><span class="badge live">Ao Vivo</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- ABA 4: PEDIDOS DE ORAÇÃO -->
+        <section id="oracao" class="tab-content">
+            <div class="grid-two-columns">
+                <div class="main-card">
+                    <h2><i class="fa-solid fa-hands-praying"></i> Deixe Seu Pedido de Oração</h2>
+                    
+                    <img src="https://images.unsplash.com/photo-1515002246390-7bf7e8f87b54?q=80&w=800" alt="Mãos juntas orando" class="content-image">
+                    
+                    <p style="margin: 20px 0; color: var(--text-light);">Cremos no poder da oração de concordância. Preencha o formulário abaixo e nossa equipe de intercessores estará orando por você.</p>
+                    
+                    <form id="prayerForm" onsubmit="handlePrayerSubmit(event)">
+                        <div class="form-group">
+                            <label for="userName">Seu Nome (Deixe em branco para Anônimo):</label>
+                            <input type="text" id="userName" placeholder="Ex: Carlos Alberto">
+                        </div>
+                        <div class="form-group">
+                            <label for="prayerText">Qual o seu motivo ou pedido de clamor?</label>
+                            <textarea id="prayerText" rows="5" placeholder="Escreva aqui as suas intenções e necessidades..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Enviar para o Altar</button>
+                    </form>
+                </div>
+                
+                <div class="sidebar-card">
+                    <h3><i class="fa-solid fa-heart-pulse"></i> Mural de Clamor</h3>
+                    <div class="prayer-wall" id="prayerWall">
+                        <div class="prayer-box">
+                            <strong>Clara Mendonça</strong>
+                            <p>Peço orações pela saúde e recuperação cirúrgica de minha mãe.</p>
+                        </div>
+                        <div class="prayer-box">
+                            <strong>Anônimo</strong>
+                            <p>Pela restauração e união do meu casamento e da minha família.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Ministério Pentecostal Labareda. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
